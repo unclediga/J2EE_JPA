@@ -25,7 +25,7 @@ public class JDBCConnectionProducer {
     }
 
     
-    public static void closeConnection(Connection conn) {
+    public static void closeDerbyConnection(Connection conn) {
         logger.info("close connection...");
 
         try{
@@ -34,6 +34,19 @@ public class JDBCConnectionProducer {
 
         //       conn.close();
         //   }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+   }
+
+    public static void closeHsqlConnection(Connection conn) {
+        logger.info("close connection...");
+
+        try{
+          if(conn != null && !conn.isClosed()){
+
+               conn.close();
+           }
         }catch(SQLException e){
             e.printStackTrace();
         }
@@ -54,7 +67,7 @@ public class JDBCConnectionProducer {
         return conn;
     }
 
-    public static boolean pingHSQL(Connection conn) {
+    public static boolean pingHsql(Connection conn) {
         logger.info("pinging connection HSQL...");
         try{
             conn.createStatement().executeQuery("select 1 from information_schema.system_users limit 1");

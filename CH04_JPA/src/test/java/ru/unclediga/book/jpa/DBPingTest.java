@@ -17,24 +17,32 @@ public class DBPingTest{
  
     @BeforeClass
     public static void init(){
-       conn = JDBCConnectionProducer.createDerbyConnection();
+       conn = JDBCConnectionProducer.createHsqlConnection();
     }
 
     @AfterClass
     public static void close(){
-       JDBCConnectionProducer.closeConnection(conn);
+       JDBCConnectionProducer.closeHsqlConnection(conn);
     }
+    // @BeforeClass
+    // public static void init(){
+    //    conn = JDBCConnectionProducer.createDerbyConnection();
+    // }
 
-    // @Test
-    // public void HSQLPingTest(){
-    //     logger.info("running HSQLPingTest()");
-    //     PingService service = container.instance().select(HSQLPingService.class).get();
-    //     assertTrue("ping() must return true", service.ping());
+    // @AfterClass
+    // public static void close(){
+    //    JDBCConnectionProducer.closeConnection(conn);
     // }
 
     @Test
-    public void DerbyPingTest(){
-        System.err.println("running DerbyPingTest()");
-        assertTrue("ping() must return true", JDBCConnectionProducer.pingDerby(conn));
+    public void HsqlPingTest(){
+        System.err.println("running HSQLPingTest()");
+        assertTrue("ping() must return true", JDBCConnectionProducer.pingHsql(conn));
     }
+
+    // @Test
+    // public void DerbyPingTest(){
+    //     System.err.println("running DerbyPingTest()");
+    //     assertTrue("ping() must return true", JDBCConnectionProducer.pingDerby(conn));
+    // }
 }
