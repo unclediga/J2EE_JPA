@@ -29,11 +29,10 @@ public class JDBCConnectionProducer {
         logger.info("close connection...");
 
         try{
-            DriverManager.getConnection("jdbc:derby:memory:chapter02DB;shutdown=true");
-        // if(conn != null && !conn.isClosed()){
+         if(conn != null && !conn.isClosed()){
 
-        //       conn.close();
-        //   }
+               conn.close();
+           }
         }catch(SQLException e){
             e.printStackTrace();
         }
@@ -80,7 +79,7 @@ public class JDBCConnectionProducer {
     public static boolean pingDerby(Connection conn) {
         logger.info("pinging connection Derby...");
         try{
-            conn.createStatement().executeQuery("SELECT 1 FROM SYSIBM.SYSDUMMY1");
+            conn.createStatement().executeQuery("SELECT 1 FROM \"INFORMATION_SCHEMA\".\"SYSTEM_TABLES\" LIMIT 1");
         }catch(SQLException e){
             return false;
         }

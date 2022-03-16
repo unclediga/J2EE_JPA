@@ -24,25 +24,16 @@ public class DBPingTest{
     public static void close(){
        JDBCConnectionProducer.closeHsqlConnection(conn);
     }
-    // @BeforeClass
-    // public static void init(){
-    //    conn = JDBCConnectionProducer.createDerbyConnection();
-    // }
 
-    // @AfterClass
-    // public static void close(){
-    //    JDBCConnectionProducer.closeConnection(conn);
-    // }
-
-    @Test
+    //@Test
     public void HsqlPingTest(){
         System.err.println("running HSQLPingTest()");
         assertTrue("ping() must return true", JDBCConnectionProducer.pingHsql(conn));
     }
 
-    // @Test
-    // public void DerbyPingTest(){
-    //     System.err.println("running DerbyPingTest()");
-    //     assertTrue("ping() must return true", JDBCConnectionProducer.pingDerby(conn));
-    // }
+    //@Test
+    public void DerbyPingTest(){
+        System.err.println("running DerbyPingTest()");
+        assertTrue("ping() must return true", JDBCConnectionProducer.pingDerby(conn));
+    }
 }

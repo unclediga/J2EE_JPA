@@ -14,6 +14,16 @@
   <dependencies>
 
     <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+    </dependency>
+
+
+    <dependency>
         <groupId>org.hsqldb</groupId>
         <artifactId>hsqldb</artifactId>
     </dependency>
@@ -52,10 +62,10 @@
         </executions>
         <configuration>
           <commandlineArgs>-Duser.language=en -Duser.country=RU</commandlineArgs>
-          <mainClass>ru.unclediga.book.jpa.Main</mainClass>
+          <mainClass>ru.unclediga.book.jpa.ch04.Main</mainClass>
         </configuration>
       </plugin>
     </plugins>
   </build>
 
-</project>
+</project>  
