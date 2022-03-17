@@ -19,10 +19,16 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <version.hibernate.validator>5.2.0.Final</version.hibernate.validator>
         <version.eclipselink>2.6.2</version.eclipselink>
+        <version.el>3.0.1-b03</version.el>
         <version.derby>10.10.1.1</version.derby>
         <version.mysql>8.0.21</version.mysql>
         <version.hsqldb>2.4.1</version.hsqldb>
         <version.junit>4.12</version.junit>
+
+
+        <version.glassfish>4.1.1.162</version.glassfish>
+        <version.javaee>7.0</version.javaee>
+
     </properties>
 
 
@@ -47,6 +53,26 @@
         <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
         <version>${version.eclipselink}</version>
       </dependency>
+
+    <dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>javax.el</artifactId>
+      <version>${version.el}</version>
+    </dependency>    
+
+      <dependency>
+        <groupId>fish.payara.extras</groupId>
+        <artifactId>payara-embedded-all</artifactId>
+        <version>${version.glassfish}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>javax</groupId>
+        <artifactId>javaee-api</artifactId>
+        <version>${version.javaee}</version>
+        <scope>provided</scope>
+      </dependency>
+
 
       <!-- HSQL --> 
       <dependency>

@@ -79,7 +79,7 @@ public class JDBCConnectionProducer {
     public static boolean pingDerby(Connection conn) {
         logger.info("pinging connection Derby...");
         try{
-            conn.createStatement().executeQuery("SELECT 1 FROM \"INFORMATION_SCHEMA\".\"SYSTEM_TABLES\" LIMIT 1");
+            conn.createStatement().executeQuery("SELECT 1 FROM SYSIBM.SYSDUMMY1");
         }catch(SQLException e){
             return false;
         }
