@@ -5,3 +5,5 @@ target
 log
 *.log
 *.patch
+*.out
+*.ddl
