@@ -13,6 +13,7 @@
     <class>ru.unclediga.book.jpa.ch05.ex09.Track</class>
     <class>ru.unclediga.book.jpa.ch05.ex11.Book11</class>
     <class>ru.unclediga.book.jpa.ch05.ex14.Customer14</class>
+    <class>ru.unclediga.book.jpa.ch05.ex17.CreditCard</class>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
