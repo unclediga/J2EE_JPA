@@ -21,6 +21,8 @@
     <class>ru.unclediga.book.jpa.ch05.ex29.Customer29</class>
     <class>ru.unclediga.book.jpa.ch05.ex34.Customer34</class>
     <class>ru.unclediga.book.jpa.ch05.ex34.Address34</class>
+    <class>ru.unclediga.book.jpa.ch05.ex39.Customer39</class>
+    <class>ru.unclediga.book.jpa.ch05.ex39.Address39</class>
     <mapping-file>META-INF/ex25_mapping.xml</mapping-file>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
