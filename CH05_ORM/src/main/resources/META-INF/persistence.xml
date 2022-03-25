@@ -23,12 +23,14 @@
     <class>ru.unclediga.book.jpa.ch05.ex34.Address34</class>
     <class>ru.unclediga.book.jpa.ch05.ex39.Customer39</class>
     <class>ru.unclediga.book.jpa.ch05.ex39.Address39</class>
+    <class>ru.unclediga.book.jpa.ch05.ex40.Order</class>
+    <class>ru.unclediga.book.jpa.ch05.ex40.OrderLine</class>
     <mapping-file>META-INF/ex25_mapping.xml</mapping-file>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:chapter05DB;create=true"/>
-      <property name="eclipselink.logging.level" value="FINEST"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
       <property name="eclipselink.logging.file" value="eclipselink.log"/>
     </properties>
   </persistence-unit>
