@@ -25,6 +25,8 @@
     <class>ru.unclediga.book.jpa.ch05.ex39.Address39</class>
     <class>ru.unclediga.book.jpa.ch05.ex40.Order</class>
     <class>ru.unclediga.book.jpa.ch05.ex40.OrderLine</class>
+    <class>ru.unclediga.book.jpa.ch05.ex43.Order43</class>
+    <class>ru.unclediga.book.jpa.ch05.ex43.OrderLine43</class>
     <mapping-file>META-INF/ex25_mapping.xml</mapping-file>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
