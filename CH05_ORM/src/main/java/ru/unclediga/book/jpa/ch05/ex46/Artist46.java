@@ -14,6 +14,10 @@ public class Artist46 {
   private Long id;
   private String firstName;
   private String lastName;
+  @ManyToMany()
+  @JoinTable(name = "link_artist_cd",
+             joinColumns = @JoinColumn(name = "artist_id"),
+             inverseJoinColumns = @JoinColumn(name = "cd_id"))
   private List<CD46> appearsOnCDs;
 
   public Artist46() {

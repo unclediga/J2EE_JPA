@@ -14,6 +14,7 @@ public class CD46 {
   private String title;
   private Float price;
   private String description;
+  @ManyToMany(mappedBy = "appearsOnCDs")
   private List<Artist46> createdByArtists;
 
   public CD46() {
