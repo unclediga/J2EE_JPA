@@ -12,6 +12,7 @@
     <modules>
         <module>ch04_jpa</module>
         <module>ch05_orm</module>
+        <module>ch06_em</module>
     </modules>
 
     <properties>
